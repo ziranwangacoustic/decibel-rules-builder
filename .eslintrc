@@ -1,0 +1,33 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "prettier/react",
+    "plugin:jest/recommended",
+    "plugin:jest/style"
+  ],
+  "plugins": ["prettier", "testing-library", "jest"],
+  "rules": {
+    "prettier/prettier": "error",
+    "testing-library/no-debug": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "**/*.test.{js,jsx}", "**/test**"],
+      "rules": {
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "import/prefer-default-export": 0,
+        "react/prop-types": 0,
+        "react/jsx-props-no-spreading": 0
+      }
+    }
+  ]
+}

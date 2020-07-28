@@ -1,0 +1,4 @@
+{
+  "Hello {{name}}": "Hello, {{name}} (in English)",
+  "Sample text": "This is sample text (in English)"
+}

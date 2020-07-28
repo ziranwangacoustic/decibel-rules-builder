@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExampleComponent should match snapshots 1`] = `
+<main
+  class="bx--full-page-template"
+  style=""
+>
+  <div
+    class="bx--full-page-template__heading"
+  >
+    <div
+      class="bx--full-page-template__header-left"
+    >
+      <div
+        class="bx--full-page-template__header-wrapper"
+      >
+        <h2
+          class=" bx--heading_default_color bx--heading_2"
+        >
+          Home Page
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    class="bx--full-page-template__content"
+  >
+    <h2
+      class=" bx--heading_default_color bx--heading_2"
+    >
+      PING / PONG example
+    </h2>
+    <h3
+      class=" bx--heading_default_color bx--heading_3"
+    >
+      is pinging: false
+    </h3>
+    <button
+      class="bx--btn bx--btn--primary"
+      tabindex="0"
+      type="button"
+    >
+      Start PING
+    </button>
+    <button
+      class="bx--btn bx--btn--primary"
+      tabindex="0"
+      type="button"
+    >
+      Just make a request
+    </button>
+    <div
+      aria-hidden="true"
+      class=" bx--hr"
+    />
+    <h2
+      class=" bx--heading_default_color bx--heading_2"
+    >
+      Translation example
+    </h2>
+    <ul
+      class="bx--list--unordered bx--list--nested"
+    >
+      <li
+        class="bx--list__item"
+      >
+        Hello, DynamicUserName (in English)
+      </li>
+      <li
+        class="bx--list__item"
+      >
+        This is sample text (in English)
+      </li>
+      <li
+        class="bx--list__item"
+      >
+        Not translated text (missing translation)
+      </li>
+    </ul>
+  </div>
+</main>
+`;

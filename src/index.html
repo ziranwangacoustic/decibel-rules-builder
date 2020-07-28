@@ -1,0 +1,39 @@
+<!-- ************************************************************
+ *
+ * Copyright (C) 2020 Acoustic, L.P. All rights reserved.
+ *
+ * NOTICE: This file contains material that is confidential and proprietary to
+ * Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
+ * industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
+ * Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
+ * prohibited.
+ *
+ ************************************************************** -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="<%= htmlWebpackPlugin.options.base %>">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="<%= htmlWebpackPlugin.options.title %>" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.options.ubxCapture.url %>"></script>
+    <script type="text/javascript">
+      ubxCapture.setTenantID('DA', '<%= htmlWebpackPlugin.options.ubxCapture.daClientID %>', '<%= htmlWebpackPlugin.options.ubxCapture.daSiteID %>');
+      ubxCapture.setID('<%= htmlWebpackPlugin.options.ubxCapture.cid %>');
+      ubxCapture.TLD = '<%= htmlWebpackPlugin.options.ubxCapture.tld %>';
+    </script>
+    <script type="text/javascript" src="/newRelicConfig.js"></script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="text/javascript">
+      if (typeof cmSetupOther === 'function') {
+        cmSetupOther({ cm_JSFEAMasterIDSessionCookie: true });
+      }
+    </script>
+  </body>
+</html>

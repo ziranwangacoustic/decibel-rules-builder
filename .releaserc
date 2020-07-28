@@ -1,0 +1,22 @@
+{
+  "branches": [
+    {
+      "name": "master"
+    },
+    {
+      "name": "develop",
+      "channel": "beta",
+      "prerelease": "beta"
+    }
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+    "@semantic-release/git",
+    ["@semantic-release/exec", {
+      "generateNotesCmd": 'echo env.projectVersion=\"${nextRelease.version}\" > .env.semantic.release'
+    }]
+  ]
+}
