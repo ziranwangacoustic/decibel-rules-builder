@@ -21,12 +21,16 @@
   },
   "overrides": [
     {
-      "files": ["*.js", "**/*.test.{js,jsx}", "**/test**"],
+      "files": ["*.{js,jsx}", "**/*.test.{js,jsx}", "**/test**"],
       "rules": {
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
         "import/prefer-default-export": 0,
         "react/prop-types": 0,
-        "react/jsx-props-no-spreading": 0
+        "react/jsx-props-no-spreading": 0,
+        "no-unused-vars": 0,
+        "react/jsx-no-bind": 0,
+        "no-lone-blocks": 0,
+        "subject-empty": 0
       }
     }
   ]

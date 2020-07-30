@@ -24,24 +24,32 @@ import RootComponent from './RootComponent';
 import { name, version } from '../package.json';
 import { LoggerProvider, exampleLoggerCfg } from './example-logger/ExampleLogger';
 
-const App = () => (
-  <Provider store={store}>
-    <Suspense fallback={<LoadingBarTemplate show />}>
-      {/* START: App specific providers */}
-      <LoggerProvider name={name} version={version} config={exampleLoggerCfg}>
-        <DemoLoggerProvider>
-          <DemoProductProvider>
-            <DemoApiProvider>
-              <DemoAuthProvider>
-                {/* END: App specific providers */}
-                <RootComponent />
-              </DemoAuthProvider>
-            </DemoApiProvider>
-          </DemoProductProvider>
-        </DemoLoggerProvider>
-      </LoggerProvider>
-    </Suspense>
-  </Provider>
-);
+import MyRulesBuilder from './MyRulesBuilder/MyRulesBuilder';
+
+const App = () => <MyRulesBuilder />;
 
 export default App;
+
+{
+  /* <Provider store={store}>
+<Suspense fallback={<LoadingBarTemplate show />}> */
+}
+{
+  /* START: App specific providers */
+}
+// <LoggerProvider name={name} version={version} config={exampleLoggerCfg}>
+//   <DemoLoggerProvider>
+//     <DemoProductProvider>
+//       <DemoApiProvider>
+//         <DemoAuthProvider>
+{
+  /* END: App specific providers */
+}
+//             <RootComponent />
+//           </DemoAuthProvider>
+//         </DemoApiProvider>
+//       </DemoProductProvider>
+//     </DemoLoggerProvider>
+//   </LoggerProvider>
+// </Suspense>
+// </Provider>
