@@ -13,6 +13,7 @@
 import React from 'react';
 import { Button } from '@decibel/components';
 import { RulesBuilderStory } from './RulesBuilderStory';
+import { RulesBuilderNew } from './RulesBuilderNew';
 
 const MyRulesBuilder = () => {
   return (
@@ -22,7 +23,7 @@ const MyRulesBuilder = () => {
         href="#"
         iconDescription="Button icon"
         kind="primary"
-        onClick={function noRefCheck() {}}
+        onClick={}
         onFocus={function noRefCheck() {}}
         onMouseDown={function noRefCheck() {}}
         preventDefaultOnMouseDown={false}
@@ -30,9 +31,10 @@ const MyRulesBuilder = () => {
         showTooltip
         size="default"
       >
-        Rule Composer Demo
+        Rule Composer Updated
       </Button>
       <RulesBuilderStory />
+      {/* <RulesBuilderNew /> */}
     </div>
   );
 };

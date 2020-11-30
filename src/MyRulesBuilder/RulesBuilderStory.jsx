@@ -165,9 +165,10 @@ export const RulesBuilderStory = () => {
 
   const downloadJson = e => {
     const { target } = e;
-    const output = rulesBuilder.output();
+    const output = [...rulesBuilder.output(), { ziran: 'something' }];
     const data = `text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(output))}`;
 
+    // const additional = '-- by Ziran';
     target.setAttribute('href', `data:${data}`);
     target.setAttribute('download', 'rules.json');
   };
